@@ -9,13 +9,13 @@
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-    int n = 0;
+	int n = 0;
 
-    if (node != NULL)
-    {
-        n = ((node->left == NULL) && (node->right == NULL) ? 1 : 0);
-    }
-    return (n);
+	if (node != NULL)
+	{
+		n = ((node->left == NULL) && (node->right == NULL) ? 1 : 0);
+	}
+	return (n);
 }
 
 /**
@@ -25,9 +25,9 @@ int binary_tree_is_leaf(const binary_tree_t *node)
  */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-    if (!tree)
-        return (0);
-    else
-        return (binary_tree_is_leaf(tree) + binary_tree_leaves(tree->right) +
-                binary_tree_leaves(tree->left));
+	if (!tree)
+		return (0);
+	else
+		return (binary_tree_is_leaf(tree) + binary_tree_leaves(tree->right) +
+				binary_tree_leaves(tree->left));
 }
